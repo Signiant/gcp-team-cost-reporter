@@ -1,0 +1,4 @@
+pyyaml
+jsonmerge
+google-cloud-bigquery
+google-oauth
