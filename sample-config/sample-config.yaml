@@ -1,0 +1,24 @@
+global:
+  days_to_report: 7
+  service_account_file: "service-account.json"
+  billing_table: "billing-data-123456.billing_data_dataset.gcp_billing_export_v1"
+    smtp:
+    server: "my.smtp.server"
+    port: "587"
+    tls: True
+    user: "smtpauth@mydomain.com"
+    password: "password"
+    from_addr: "reports@acme.com"
+    cc_addrs:
+      - "cfo@acme.com"
+      - "cto@acme.com"
+    template: "team-summary.html"
+
+teams:
+  - name: "one"
+    email: "team-one@acme.com"
+    folder: "123456789123456789"
+
+  - name: "two"
+    email: "team-two@acme.com"
+    folder: "123456789123456789"
