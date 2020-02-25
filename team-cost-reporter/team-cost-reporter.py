@@ -31,6 +31,8 @@ def main():
         try:
             if costs_by_team[team['name']] >= 0.01:
                 output.outputResults(team['name'], config_map, costs_by_team[team['name']], debug)
+            else:
+                output.writeTeamCosts(team['name'], config_map, costs_by_team[team['name']], debug)
         except Exception as e:
             print("Error emailing results for folder_id %s. Verify the spelling" % e)
 

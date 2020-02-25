@@ -1,6 +1,5 @@
 from google.cloud import bigquery
 from google.oauth2 import service_account
-
 from output import getEndDate, getStartDate
 
 
@@ -36,6 +35,6 @@ def get_all_costs(config_map, debug):
     team_cost = {}
 
     for team in config_map['teams']:
-         team_cost[team['name']] = _get_all_project_costs(service_account_file, billing_table, team['folder_id'], start_date, end_date, debug)
-
+        team_cost[team['name']] = _get_all_project_costs(service_account_file, billing_table, team['folder_id'],
+                                                         start_date, end_date, debug)
     return team_cost
